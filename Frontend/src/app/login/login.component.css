@@ -1,0 +1,111 @@
+/* Glavni kontejner */
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #f4ede4; /* Svetla bež - prirodna boja drveta */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #8b5e3c; /* Tamnobraon okvir */
+}
+
+/* Naslov */
+h2 {
+    font-size: 26px;
+    color: #5a3d2b; /* Tamnija boja drveta */
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Stilizacija input polja */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #8b5e3c; /* Braon okvir */
+    border-radius: 5px;
+    font-size: 16px;
+    background: #fffaf3; /* Svetlo bež pozadina */
+    color: #5a3d2b; /* Tamno braon tekst */
+    transition: border 0.3s ease-in-out;
+}
+
+/* Fokus na input polja */
+input:focus {
+    border-color: #4d3221; /* Tamnija braon za fokus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(77, 50, 33, 0.4);
+}
+
+/* Stilizacija poruka o greškama */
+.error-message {
+    color: #c0392b; /* Crvenkasta nijansa za upozorenja */
+    font-size: 14px;
+    margin-left: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Dugme za slanje forme */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #5a3d2b; /* Tamnobraon */
+    color: #fffaf3; /* Svetlo bež */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #4d3221; /* Još tamnija braon */
+}
+
+/* Responsivnost - Manji uređaji (mobilni telefoni) */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px; /* Smanjenje padding-a */
+        max-width: 90%; /* Povećavanje širine za mobilne uređaje */
+    }
+
+    h2 {
+        font-size: 22px; /* Smanjenje fonta za naslove */
+    }
+
+    input {
+        font-size: 14px; /* Smanjenje fonta u inputima */
+    }
+
+    button {
+        font-size: 14px; /* Smanjenje fonta na dugmetu */
+    }
+}
+
+/* Responsivnost - Vrlo mali uređaji (telefoni u portretnom načinu) */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        margin: 20px auto; /* Smanjenje margine za manji prostor */
+    }
+
+    h2 {
+        font-size: 20px; /* Dodatno smanjenje fonta za naslove */
+    }
+
+    input {
+        font-size: 14px; /* Smanjenje fonta za input polja */
+    }
+
+    button {
+        font-size: 14px; /* Smanjenje fonta na dugmetu */
+        padding: 10px; /* Smanjenje padding-a za dugme */
+    }
+}

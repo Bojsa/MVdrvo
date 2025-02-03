@@ -47,7 +47,7 @@
         <a routerLink="/services" 
            routerLinkActive="active" 
            (click)="closeMenu()">Usluge</a>
-           <a routerLink="/contact" 
+           <a routerLink="/comments" 
            routerLinkActive="active" 
            (click)="closeMenu()">Komentari</a>
         <a routerLink="/contact" 
@@ -62,7 +62,7 @@
            (click)="closeMenu()">Prijava</a>
         <a routerLink="/register" 
            class="register-btn" 
-           (click)="closeMenu()">Registracija</a>
+           mat-button (click)="openRegisterDialog()">Registracija</a>
       </div>
     </nav>
   </header>

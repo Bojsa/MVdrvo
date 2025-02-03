@@ -4,18 +4,19 @@
     max-width: 450px;
     margin: 50px auto;
     padding: 25px;
-    background: #f4ede4; /* Svetla bež - prirodna boja drveta */
+    background: #f4ede4; /* da pozadina ne bi bila bela jer zelimo da se prikaze cela stranica odnosno da bude popup */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
     border: 2px solid #8b5e3c; /* Tamnobraon okvir */
+    
 }
 
 /* Naslov */
 h2 {
     font-size: 26px;
     color: #5a3d2b; /* Tamnija boja drveta */
-    margin-bottom: 20px;
+    margin-bottom: 20px;        /* 20px praznog prostora ispod elementa*/
     font-family: 'Georgia', serif;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -51,7 +52,7 @@ input:focus {
 }
 
 /* Dugme za slanje forme */
-button {
+.button-send  {
     width: 100%;
     padding: 12px;
     background: #5a3d2b; /* Tamnobraon */
@@ -59,6 +60,21 @@ button {
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+}
+
+.button-close {
+    width: 10%;
+    padding: 9px;
+     float: right;   /* poravnanje uz desnu ivicu */
+    background: #5a3d2b; /* Tamnobraon */
+    color: #fffaf3; /* Svetlo bež */
+    border: none;
+    border-radius: 3px;
+    font-size: 10px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     font-family: 'Georgia', serif;
@@ -84,7 +100,7 @@ button:hover {
         font-size: 14px; /* Smanjenje fonta u inputima */
     }
 
-    button {
+    .button-send {
         font-size: 14px; /* Smanjenje fonta na dugmetu */
     }
 }
@@ -104,8 +120,18 @@ button:hover {
         font-size: 14px; /* Smanjenje fonta za input polja */
     }
 
-    button {
+    .button-send {
         font-size: 14px; /* Smanjenje fonta na dugmetu */
         padding: 10px; /* Smanjenje padding-a za dugme */
     }
 }
+
+.mat-mdc-dialog-container .mdc-dialog__surface {                                         /* JAKO VAZNOO. UKLANJA BELINE U POZADINI*/
+    background-color: transparent !important; /* Postavlja pozadinu na providnu */
+    box-shadow: none !important; /* Uklanja senku */
+}
+
+html, body {
+
+    overflow: hidden !important; /* Ovo uklanja skrol sa cele stranice */
+  }

@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule],
+  encapsulation: ViewEncapsulation.None,
+  imports: [ReactiveFormsModule,CommonModule, LoginComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
@@ -13,7 +15,8 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+
+  constructor(private fb: FormBuilder,private dialogRef: MatDialogRef<LoginComponent>) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -25,12 +28,19 @@ export class LoginComponent implements OnInit {
     });
    }
 
+   closeDialog() {
+  this.dialogRef.close();
+}
+
    onSubmit(){
       console.log(this.loginForm.value);
    }
 
   ngOnInit() {
   }
+
+
+
 
 
 }

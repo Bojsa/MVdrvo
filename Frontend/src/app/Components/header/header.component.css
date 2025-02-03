@@ -1,6 +1,6 @@
 .header {
     background-color: #dacdc2; /* #e9cbb4 ova boja nije losa */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /*dodajemo senku ispod header-a */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); dodajemo senku ispod header-a */
     position: fixed;                /*ova i naredne tri linije su bitne ako hoces da ti header bude fixiran na vehu ekrana i da prati korisnika dok skroluje */
     top: 0;
     left: 0;
@@ -9,8 +9,8 @@
     transition: all 0.3s ease; /*dodajemo tranziciju za glatko prelazenje izmedju dva stanja */
   }
   
-  .header.scrolled {
-    background-color: rgba(255, 255, 255, 0.95);   /*dodajemo belu boju sa 95% providnosti */
+  .header.scrolled {      /* Ovo nesto ne radi*/
+    background-color: rgba(255, 255, 255, 0.95);   /*dodajemo  boju sa 95% providnosti */
     backdrop-filter: blur(5px); /*dodajemo blur efekat na header */
   }
   
@@ -19,30 +19,30 @@
     margin: 0 auto; /* Centriramo nav kontejner */
     padding: 0.5%;/* Dodajemo padding od 1rem sa svih strana, padding je  razmak izmedju teksta i ivice dugmeta*/
     display: flex; /* najboljih načina za raspoređivanje elemenata u redove i kolone. */
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+    justify-content: space-between; /* Postavljamo elemente na krajeve kontejnera */
+    align-items: center;  /* Postavljamo elemente vertikalno u centar */
+    position: relative;   /* Postavljamo relativnu poziciju kako bi mogli da koristimo z-index */
   }
   
   /* Logo styling */
   .logo-section {
-    display: flex;
+    display: flex;  /* najboljih načina za raspoređivanje elemenata u redove i kolone. */
     align-items: center;
     z-index: 1001; /* Iznad overlay-a */
-    padding: 0px;
+    padding: 0px;   /* Poništi nepotrebni padding */
   }
   
   .logo {
     display: flex;
     align-items: center;
-    text-decoration: none;
+    text-decoration: none; /* Uklanjamo podvučenost */
     color: #333;
   }
   
   .logo-image {
     height: 40px;
-    width: auto;
-    margin-right: 10px;
+    width: auto;  
+    margin-right: 10px; /* Dodajemo razmak između slike i teksta */
   }
   
   
@@ -50,7 +50,7 @@
   /* Navigation links */
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2rem; /* Razmak između linkova */
     align-items: center;
         
   }
@@ -74,8 +74,8 @@
     transition: width 0.3s ease;
   }
   
-  .nav-links a:hover::after,
-  .nav-links a.active::after {
+  .nav-links a:hover::after,    /*hover klasa osigurava da se link podvuče kada korisnik pređe preko njega mišem.*/
+  .nav-links a.active::after {  
     width: 100%;
   }
   
@@ -161,8 +161,8 @@
       display: flex;
     }
   
-    .mobile-menu-btn.active .bar:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
+    .mobile-menu-btn.active .bar:nth-child(1) { 
+      transform: rotate(45deg) translate(5px, 5px);   
     }
   
     .mobile-menu-btn.active .bar:nth-child(2) {
@@ -181,18 +181,24 @@
       height: 100vh;
       width: 80%;
       max-width: 300px;
-      background-color: white;
+      background-color: transparent;
       flex-direction: column;
       padding: 5rem 2rem 2rem;
       gap: 1.5rem;
       transition: right 0.3s ease;
       z-index: 1000;
+      background: transparent;
       
     }
   
     .nav-links.active {
       display: flex;
       right: 0;
+      font-size:xx-large;
+      /* background-color: #dacdc2; 
+      border-left: 2px solid #8b5e3c; */
+
+      
     }
   
     .nav-overlay.active {
@@ -215,6 +221,11 @@
     .nav-links a {
       width: 100%;
       padding: 0.5rem 0;
+      color: white;
+      text-shadow: 1px 1px 2px rgba(90, 61, 43, 0.7); /* Jarko braon ivica oko slova */
+
+
+
     }
   }
   

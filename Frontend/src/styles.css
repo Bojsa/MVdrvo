@@ -36,3 +36,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 
  /* padding-top: 1px;  Prilagodite prema visini vašeg header-a . OVO POMERA SADRZAJ OD HEADERA DA NE BI HEADER JEDAN DEO SADRZAJA (SLIKE) SAKRIO ISPOD HEADERA **JAKO VAZNO** */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+

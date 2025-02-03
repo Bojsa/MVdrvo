@@ -1,15 +1,16 @@
 <div class="login-container">
+    <button class="button-close" (click)="closeDialog()">X</button>
     <h2>Registration</h2>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
-    <!-- <label for="username">Username</label> -->
+    
     <input id="username" formControlName="username" type="text" placeholder="Username"  required/>
     <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
         Username is required.
     </div>
 
-    <!-- <label for="email">Email</label> -->
-    <input id="email" formControlName="email" type="email" placeholder="Email" />
+    
+    <input id="email" formControlName="email" type="email" placeholder="Email" required />
     <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
         Email is required.
     </div>
@@ -35,13 +36,14 @@
     </div>
 
     <input id="birthdate" formControlName="birthdate" type="date" placeholder="Birthdate" required/>
-    <div *ngIf="loginForm.get('birthday')?.invalid && loginForm.get('birthday')?.touched">
-        Birthday is required.
+    <div *ngIf="loginForm.get('birthdate')?.invalid && loginForm.get('birthdate')?.touched">
+        Birthdate is required.
     </div>
 
-    <button type="submit" [disabled]="loginForm.invalid">Register</button>
+    <button class="button-send" type="submit" [disabled]="loginForm.invalid">Register</button>
 
     </form>
+    
 
 
 </div>

@@ -6,7 +6,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-login',
   standalone: true,
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None,        
   imports: [ReactiveFormsModule,CommonModule, LoginComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
@@ -36,7 +36,8 @@ export class LoginComponent implements OnInit {
       console.log(this.loginForm.value);
    }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    
   }
 
 

@@ -5,12 +5,13 @@ import { HeaderComponent } from "./Components/header/header.component";
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './Components/footer/footer.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { LogintoComponent } from "./loginto/loginto.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoginComponent, HeaderComponent, CommonModule, FooterComponent, MatDialogModule],
+  imports: [RouterOutlet, LoginComponent, HeaderComponent, CommonModule, FooterComponent, MatDialogModule, LogintoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

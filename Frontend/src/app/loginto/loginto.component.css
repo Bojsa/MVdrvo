@@ -1,0 +1,126 @@
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #f4ede4; /* da pozadina ne bi bila bela jer zelimo da se prikaze cela stranica odnosno da bude popup */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #8b5e3c; /* Tamnobraon okvir */
+    
+}
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #8b5e3c; /* Braon okvir */
+    border-radius: 5px;
+    font-size: 16px;
+    background: #fffaf3; /* Svetlo bež pozadina */
+    color: #5a3d2b; /* Tamno braon tekst */
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #4d3221; /* Tamnija braon za fokus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(77, 50, 33, 0.4);
+}
+
+
+/* Dugme za slanje forme */
+.button-send  {
+    width: 100%;
+    padding: 12px;
+    background: #5a3d2b; /* Tamnobraon */
+    color: #fffaf3; /* Svetlo bež */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+}
+
+.button-close {
+    width: 10%;
+    padding: 9px;
+     float: right;   /* poravnanje uz desnu ivicu */
+    background: #5a3d2b; /* Tamnobraon */
+    color: #fffaf3; /* Svetlo bež */
+    border: none;
+    border-radius: 3px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #4d3221; /* Još tamnija braon */
+}
+
+/* Naslov */
+h2 {
+    font-size: 26px;
+    color: #5a3d2b; /* Tamnija boja drveta */
+    margin-bottom: 20px;        /* 20px praznog prostora ispod elementa*/
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsivnost - Manji uređaji (mobilni telefoni) */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px; /* Smanjenje padding-a */
+        max-width: 90%; /* Povećavanje širine za mobilne uređaje */
+    }
+
+    h2 {
+        font-size: 22px; /* Smanjenje fonta za naslove */
+    }
+
+    input {
+        font-size: 14px; /* Smanjenje fonta u inputima */
+    }
+
+    .button-send {
+        font-size: 14px; /* Smanjenje fonta na dugmetu */
+    }
+}
+
+/* Responsivnost - Vrlo mali uređaji (telefoni u portretnom načinu) */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        margin: 20px auto; /* Smanjenje margine za manji prostor */
+    }
+
+    h2 {
+        font-size: 20px; /* Dodatno smanjenje fonta za naslove */
+    }
+
+    input {
+        font-size: 14px; /* Smanjenje fonta za input polja */
+    }
+
+    .button-send {
+        font-size: 14px; /* Smanjenje fonta na dugmetu */
+        padding: 10px; /* Smanjenje padding-a za dugme */
+    }
+}
+
+
+.mat-mdc-dialog-container .mdc-dialog__surface {                                         /* JAKO VAZNOO. UKLANJA BELINE U POZADINI*/
+    background-color: transparent !important; /* Postavlja pozadinu na providnu */
+    box-shadow: none !important; /* Uklanja senku */
+}
+
+html, body {
+
+    overflow: hidden !important; /* Ovo uklanja skrol sa cele stranice */
+  }

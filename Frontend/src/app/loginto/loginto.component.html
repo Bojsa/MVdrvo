@@ -1,1 +1,25 @@
-<p>loginto works!</p>
+<div class="login-container">
+    <button class="button-close" (click)="closeDialog()">X</button>
+    <h2>Login to your account</h2>
+    <form [formGroup]="logintoForm" (ngSubmit)="onSubmit()">
+
+    
+    <input id="email" formControlName="email" type="email" placeholder="Email" required />
+    <div *ngIf="logintoForm.get('email')?.invalid && logintoForm.get('email')?.touched">
+        Email is invalid.
+    </div>
+
+    <input id="password" formControlName="password" type="password" placeholder="Password" required/>
+    <div *ngIf="logintoForm.get('password')?.invalid && logintoForm.get('password')?.touched">
+        Wrong password.
+    </div>
+
+   
+
+    <button class="button-send" type="submit" [disabled]="logintoForm.invalid">Log in</button>
+
+    </form>
+    
+
+
+</div>

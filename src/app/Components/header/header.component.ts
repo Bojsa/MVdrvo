@@ -1,11 +1,13 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { LoginComponent } from '../../login/login.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, LoginComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
@@ -29,7 +31,14 @@ export class HeaderComponent {
     // Sprečava scroll na body-ju kada je meni otvoren
     document.body.style.overflow = this.isMenuOpen ? 'hidden' : 'auto';
   }
+  constructor(private dialog: MatDialog) {}
 
+  openRegisterDialog() {
+    this.dialog.open(LoginComponent, {
+      width: '400px', // Možeš prilagoditi širinu
+      disableClose: true // Ako želiš da korisnik mora da klikne dugme da bi zatvorio
+    });
+  }
   // Metoda za zatvaranje menija
   closeMenu() {
     this.isMenuOpen = false;

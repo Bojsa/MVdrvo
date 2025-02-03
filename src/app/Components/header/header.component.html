@@ -1,0 +1,68 @@
+<!-- Glavni header kontejner -->
+<header class="header" [class.scrolled]="isScrolled">
+    <!-- [class.scrolled]="isScrolled" dodaje klasu 'scrolled' kada korisnik scrolla stranicu -->
+    
+    <!-- Glavni nav kontejner koji drži sve elemente -->
+    <nav class="nav-container">
+      
+      <!-- Logo sekcija -->
+      <div class="logo-section">
+        <a routerLink="/" class="logo" (click)="closeMenu()">
+          <!-- routerLink="/" vodi na početnu stranicu -->
+          <!-- (click)="closeMenu()" zatvara mobilni meni kada se klikne na logo -->
+          
+          <img src="assets/logo.webp" alt="Logo" class="logo-image">
+          <span class="company-name">MV drvo</span>
+        </a>
+      </div>
+  
+      <!-- Hamburger dugme za mobilni meni -->
+      <button class="mobile-menu-btn" 
+              [class.active]="isMenuOpen"
+              (click)="toggleMenu()"
+              aria-label="Toggle menu">
+        <!-- [class.active] dodaje/uklanja active klasu kada je meni otvoren/zatvoren -->
+        <!-- aria-label je za accessibility (čitače ekrana) -->
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+  
+      <!-- Tamni overlay koji se pojavljuje iza mobilnog menija -->
+      <div class="nav-overlay" 
+           [class.active]="isMenuOpen"
+           (click)="closeMenu()">
+      </div>
+  
+      <!-- Navigacioni linkovi -->
+      <div class="nav-links" [class.active]="isMenuOpen">
+        <a routerLink="/home" 
+           routerLinkActive="active" 
+           (click)="closeMenu()">Početna</a>
+        <!-- routerLinkActive="active" dodaje active klasu kada je link aktivan -->
+        <!-- ostali linkovi su slični -->
+        <a routerLink="/about" 
+           routerLinkActive="active" 
+           (click)="closeMenu()">O nama</a>
+        <a routerLink="/services" 
+           routerLinkActive="active" 
+           (click)="closeMenu()">Usluge</a>
+           <a routerLink="/contact" 
+           routerLinkActive="active" 
+           (click)="closeMenu()">Komentari</a>
+        <a routerLink="/contact" 
+           routerLinkActive="active" 
+           (click)="closeMenu()">Kontakt</a>
+      </div>
+  
+      <!-- Dugmad za prijavu/registraciju -->
+      <div class="auth-buttons">
+        <a routerLink="/login" 
+           class="login-btn" 
+           (click)="closeMenu()">Prijava</a>
+        <a routerLink="/register" 
+           class="register-btn" 
+           (click)="closeMenu()">Registracija</a>
+      </div>
+    </nav>
+  </header>

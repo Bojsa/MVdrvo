@@ -1,0 +1,47 @@
+<div class="login-container">
+    <h2>Registration</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <!-- <label for="username">Username</label> -->
+    <input id="username" formControlName="username" type="text" placeholder="Username"  required/>
+    <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+        Username is required.
+    </div>
+
+    <!-- <label for="email">Email</label> -->
+    <input id="email" formControlName="email" type="email" placeholder="Email" />
+    <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+        Email is required.
+    </div>
+
+    <input id="password" formControlName="password" type="password" placeholder="Password" required/>
+    <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        Password is required.
+    </div>
+
+    <input id="name" formControlName="name" type="text" placeholder="Name" required/>
+    <div *ngIf="loginForm.get('name')?.invalid && loginForm.get('name')?.touched">
+        Name is required.
+    </div>
+
+    <input id="surname" formControlName="surname" type="text" placeholder="Surname" required/>
+    <div *ngIf="loginForm.get('surname')?.invalid && loginForm.get('surname')?.touched">
+        Surname is required.
+    </div>
+
+    <input id="address" formControlName="address" type="text" placeholder="Address" required/>  
+    <div *ngIf="loginForm.get('address')?.invalid && loginForm.get('address')?.touched">
+        Address is required.
+    </div>
+
+    <input id="birthdate" formControlName="birthdate" type="date" placeholder="Birthdate" required/>
+    <div *ngIf="loginForm.get('birthday')?.invalid && loginForm.get('birthday')?.touched">
+        Birthday is required.
+    </div>
+
+    <button type="submit" [disabled]="loginForm.invalid">Register</button>
+
+    </form>
+
+
+</div>

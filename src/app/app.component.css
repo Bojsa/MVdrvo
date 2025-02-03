@@ -1,0 +1,14 @@
+
+.hero-image {
+    width: 100;
+    height: calc(100vh - 20px); /* ili koja god visina vam odgovara */
+    overflow: hidden;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ovo će održati proporcije slike */
+  }
+
+  

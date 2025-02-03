@@ -1,1 +1,38 @@
+
 /* You can add global styles to this file, and also import other style files */
+/*html, body {    */                /*Primeni ova pravila na HTML i na BODY element*/
+   /* min-height: 100%;   */        /*Oba elementa ce imati npr height 100%*/
+   /* height: auto;
+    margin: 0;
+    background: url("./assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */  /*ovo dodati da se slika ne bi pomerala gore dole*/
+  /*}
+
+
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  */
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+ /* padding-top: 1px;  Prilagodite prema visini vašeg header-a . OVO POMERA SADRZAJ OD HEADERA DA NE BI HEADER JEDAN DEO SADRZAJA (SLIKE) SAKRIO ISPOD HEADERA **JAKO VAZNO** */

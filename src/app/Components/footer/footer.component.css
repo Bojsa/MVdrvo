@@ -1,0 +1,305 @@
+.footer {
+    background-color:  #dacdc2;
+    color: #ecf0f1;
+    padding: 60px 0 0 0;
+    margin-top: 50px;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  /* Logo sekcija */
+  .footer-logo {
+    font-family: 'Georgia', serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #0a0a0a;
+  
+  }
+  .footer-logo1 {
+    font-family: 'Georgia', serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #0a0a0a;
+    border-bottom: 3px solid #0073e6; /* Elegantna linija ispod teksta */
+  }
+
+  .footer-logo img {
+    height: 40px;
+    width: auto;
+  }
+  
+  .footer-logo h3 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .company-description {
+    color: #0a0a0a;
+    line-height: 1.6;
+  }
+  
+  /* Naslovi sekcija */
+  .footer-section h4 {
+    color: #0a0a0a;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .footer-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 50px;
+    height: 2px;
+    background-color: #3498db;
+  }
+  
+  /* Liste */
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-section ul li a {
+    color: #0a0a0a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #3498db;
+  }
+  
+  /* Kontakt informacije */
+  .contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #0a0a0a;
+  }
+  
+  .contact-info i {
+    color: #3498db;
+    width: 20px;
+  }
+  
+  /* Radno vreme */
+  .working-hours li {
+    color: #0a0a0a;
+  }
+  
+  /* Donji deo footer-a */
+  .footer-bottom {
+    background-color: #000000;
+    padding: 8px 0;
+    margin-top: 40px;
+  }
+
+  .footer-bottom1 {
+    color: #0a0a0a;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    position: relative;
+  }
+  
+  .footer-bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    color: #bdc3c7;
+  }
+
+  /* Socijalni linkovi */
+  .social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+
+    
+  }
+  
+  .social-links a {
+    color: #0a0a0a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #3498db;
+  }
+  
+  /* Responsive dizajn */
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+  }
+
+  /* MREZE */
+
+
+
+
+
+  .footer-bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between; /* Razmak između copyright teksta i ikonica */
+    align-items: center;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 20px; /* Razmak između ikonica */
+  }
+  
+  .social-links a {
+    color: #bdc3c7;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+  }
+  
+  .social-links a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+  }
+  
+  /* Specifične boje za svaku mrežu na hover */
+  .social-links a:hover .fa-facebook-f {
+    color: #1877f2;
+  }
+  
+  .social-links a:hover .fa-instagram {
+    color: #e4405f;
+  }
+  
+  .social-links a:hover .fa-tiktok {
+    color: #00f2ea;
+  }
+  
+  /* Responsive dizajn */
+  @media (max-width: 768px) {
+    .footer-bottom-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    .social-links {
+      justify-content: center;
+    }
+  }
+
+
+
+
+
+        /*SOCIJALNE MREZE DA LEBDE SA DESNE STRANE*/
+  
+
+  .floating-social-links {
+    position: fixed;  /* Fiksna pozicija */
+    right: 20px;     /* Udaljenost od desne ivice */
+    bottom: 20px;    /* Udaljenost od dna */
+    display: flex;
+    flex-direction: column;  /* Vertikalno poređane ikonice */
+    gap: 10px;
+    z-index: 999;    /* Uvek iznad ostalog sadržaja */
+  }
+  
+  .social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Hover efekti */
+  .social-btn:hover {
+    transform: translateX(-5px);  /* Pomera se malo ulevo na hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .social-btn:hover .fa-facebook-f {
+    color: #1877f2;
+  }
+  
+  .social-btn:hover .fa-instagram {
+    color: #e4405f;
+  }
+  
+  .social-btn:hover .fa-tiktok {
+    color: #000000;
+  }
+  
+  /* Responsive dizajn */
+  @media (max-width: 768px) {
+    .floating-social-links {
+      right: 10px;  /* Malo bliže ivici na mobilnom */
+      bottom: 10px;
+    }
+  
+    .social-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+  
+  /* Opciono: Sakrivanje na jako malim ekranima */
+  @media (max-width: 480px) {
+    .floating-social-links {
+      display: none;
+    }
+  }
+  

@@ -1,1 +1,25 @@
-<p>loginto works!</p>
+<div class="login-container">
+    <button class="button-close" (click)="closeDialog()">X</button>
+    <h2>Prijavite se na nalog</h2>
+    <form [formGroup]="logintoForm" (ngSubmit)="onSubmit()">
+
+    
+    <input id="email" formControlName="email" type="email" placeholder="Email" required />
+    <div *ngIf="logintoForm.get('email')?.invalid && logintoForm.get('email')?.touched">
+        Email je neispravan.
+    </div>
+
+    <input id="password" formControlName="password" type="password" placeholder="Lozinka" required/>
+    <div *ngIf="logintoForm.get('password')?.invalid && logintoForm.get('password')?.touched">
+        Pogrešna lozinka.
+    </div>
+
+   
+
+    <button class="button-send" type="submit" [disabled]="logintoForm.invalid">Prijavi se</button>
+
+    </form>
+    
+
+
+</div>

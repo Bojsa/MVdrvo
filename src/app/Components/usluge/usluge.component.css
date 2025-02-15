@@ -1,0 +1,124 @@
+/* Globalne stilove za sekciju */
+.services-section {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    margin-top: 56px; /* Dodaje razmak između header-a i sekcije */
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #4d4d4d;
+    margin-bottom: 40px;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .service-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .service-icon {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    margin: 0 auto 20px auto; /* Centriranje horizontalno */
+    display: block;
+  }
+  
+  
+  .service-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .service-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  /* Mobile-first stilovi */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .service-title {
+      font-size: 20px;
+    }
+  
+    .service-description {
+      font-size: 14px;
+    }
+    .services-section {
+        margin-top: 56px; /* Dodaje razmak između header-a i sekcije na mobilnim uređajima */
+      }
+  }
+  
+    /* Responsive design */
+
+      
+      /* Za veće tablete i manje desktop ekrane */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .section-title {
+            font-size: 28px;
+          }
+        
+          .service-title {
+            font-size: 20px;
+          }
+        
+          .service-description {
+            font-size: 14px;
+          }
+          .services-section {
+              margin-top: 56px; /* Dodaje razmak između header-a i sekcije na mobilnim uređajima */
+            }
+      }
+      
+      /* Za male ekrane u landscape orijentaciji */
+      @media (max-height: 500px) and (orientation: landscape) {
+        .section-title {
+            font-size: 28px;
+          }
+        
+          .service-title {
+            font-size: 20px;
+          }
+        
+          .service-description {
+            font-size: 14px;
+          }
+          .services-section {
+              margin-top: 56px; /* Dodaje razmak između header-a i sekcije na mobilnim uređajima */
+            }
+        }

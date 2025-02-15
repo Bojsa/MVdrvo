@@ -1,46 +1,46 @@
 <div class="login-container">
     <button class="button-close" (click)="closeDialog()">X</button>
-    <h2>Registration</h2>
+    <h2>Registracija</h2>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
     
-    <input id="username" formControlName="username" type="text" placeholder="Username"  required/>
+    <input id="username" formControlName="username" type="text" placeholder="Korisničko ime"  required/>
     <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
-        Username is required.
+        Korisničko ime je obavezno.
     </div>
 
     
     <input id="email" formControlName="email" type="email" placeholder="Email" required />
     <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
-        Email is required.
+        Email je obavezan.
     </div>
 
-    <input id="password" formControlName="password" type="password" placeholder="Password" required/>
+    <input id="password" formControlName="password" type="password" placeholder="Lozinka" required/>
     <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
-        Password is required.
+        Lozinka je obavezna.
     </div>
 
-    <input id="name" formControlName="name" type="text" placeholder="Name" required/>
+    <input id="name" formControlName="name" type="text" placeholder="Ime" required/>
     <div *ngIf="loginForm.get('name')?.invalid && loginForm.get('name')?.touched">
-        Name is required.
+        Ime je obavezno.
     </div>
 
-    <input id="surname" formControlName="surname" type="text" placeholder="Surname" required/>
+    <input id="surname" formControlName="surname" type="text" placeholder="Prezime" required/>
     <div *ngIf="loginForm.get('surname')?.invalid && loginForm.get('surname')?.touched">
-        Surname is required.
+        Prezime je obavezno.
     </div>
 
-    <input id="address" formControlName="address" type="text" placeholder="Address" required/>  
+    <input id="address" formControlName="address" type="text" placeholder="Adresa" required/>  
     <div *ngIf="loginForm.get('address')?.invalid && loginForm.get('address')?.touched">
-        Address is required.
+        Adresa je obavezna.
     </div>
 
-    <input id="birthdate" formControlName="birthdate" type="date" placeholder="Birthdate" required/>
+    <input id="birthdate" formControlName="birthdate" type="date" placeholder="Datum rođenja" required/>
     <div *ngIf="loginForm.get('birthdate')?.invalid && loginForm.get('birthdate')?.touched">
-        Birthdate is required.
+        Datum rođenja je obavezan.
     </div>
 
-    <button class="button-send" type="submit" [disabled]="loginForm.invalid">Register</button>
+    <button class="button-send" type="submit" [disabled]="loginForm.invalid">Registruj se</button>
 
     </form>
     

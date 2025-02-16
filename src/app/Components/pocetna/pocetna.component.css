@@ -13,4 +13,74 @@
     height: 100%; /* Visina slike se prilagođava visini kontejnera */
     object-fit: cover; /* Održava proporcije slike */
   }
-  
+  .products-section {
+    padding: 50px 0; /* Dodaje razmak iznad i ispod sekcije */
+    background-color: #f4f4f4; /* Siva pozadina sekcije */
+}
+
+.products-section1 {
+  padding: 50px 0; /* Dodaje razmak iznad i ispod sekcije */
+  background-color: #f4f4f4; /* Siva pozadina sekcije */
+      display: flex; /* Fleksibilno poravnanje */
+    justify-content: center; /* Centriranje sadržaja horizontalno */
+}
+
+.container {
+    display: flex; /* Postavlja elemente (product-card) u jedan red */
+    justify-content: space-between; /* Raspoređuje kartice duž reda */
+    gap: 30px; /* Razmak između proizvoda */
+    width: 100%; /* Kartice popunjavaju punu širinu */
+    margin: 0 auto; /* Centriranje sekcije */
+}
+
+.product-card {
+    background-color: white; /* Bela pozadina kartice */
+    padding: 20px; /* Unutrašnji razmak unutar kartice */
+    border-radius: 8px; /* Zaobljeni uglovi kartice */
+    text-align: center; /* Centriranje teksta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga senka za efekat podizanja */
+    width: 50%; /* Svaka kartica zauzima pola ekrana */
+    transition: transform 0.3s ease-in-out; /* Animacija kod hover efekta */
+}
+.product-card1 {
+  background-color: white; /* Bela pozadina kartice */
+  padding: 20px; /* Unutrašnji razmak unutar kartice */
+  border-radius: 8px; /* Zaobljeni uglovi kartice */
+  text-align: center; /* Centriranje teksta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga senka za efekat podizanja */
+  width: 45%; /* Svaka kartica zauzima pola ekrana */
+  transition: transform 0.3s ease-in-out; /* Animacija kod hover efekta */
+}
+.product-card1:hover {
+  transform: translateY(-5px); /* Efekat podizanja kad se pređe mišem */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Efekat podizanja kad se pređe mišem */
+}
+
+.home-icon {
+    width: 100%; /* Slika zauzima 100% širine kartice */
+    max-width: 800px; /* Maksimalna širina slike */
+    height: auto; /* Održava proporcije slike */
+    margin-bottom: 15px; /* Razmak između slike i teksta */
+}
+
+.btn {
+    background-color: white; /* Plava boja dugmeta */
+    color: rgb(0, 0, 0); /* Bela boja teksta */
+    padding: 10px 15px; /* Unutrašnji razmak dugmeta */
+    border: 1px solid #5a3d2b;
+    border-radius: 5px; /* Zaobljeni uglovi dugmeta */
+    cursor: pointer; /* Promena kursora pri hover efektu */
+    text-decoration: none; /* Uklanja podvlačenje */
+    display: inline-block; /* Omogućava normalno ponašanje dugmeta */
+}
+
+.btn:hover {
+  background-color: rgba(5, 197, 37, 0.1);
+}
+
+
+/* animacije */
+

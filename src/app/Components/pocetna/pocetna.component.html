@@ -3,9 +3,49 @@
   </div>
   
    <!-- Dummy sadržaj za testiranje -->
-   <div style="padding: 20px;">
+   <!-- <div style="padding: 20px;">
      <div *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]">
        <h2>Section {{i}}</h2>
        <p>Lorem ipsum dolor sit amet...</p>
      </div>
-   </div>
+   </div> -->
+
+
+
+<section class="products-section">
+  <div class="container">
+    <div class="product-card" *ngIf="showElement" [@fadeIn]>
+      <img src="assets/background.png" alt="Daske" class="home-icon">
+      <p>Nudimo širok asortiman daske različitih dimenzija...</p>
+      <button class="btn" routerLink="/proizvodi">Detalji</button>
+    </div>
+    <div class="product-card">
+      <img src="assets/background.png" alt="Hiper" class="home-icon">
+      <p>Nudimo širok asortiman daske različitih dimenzija...</p>
+      <button class="btn" routerLink="/proizvodi">Detalji</button>
+    </div>
+  </div>
+</section>
+
+<section class="products-section">
+  <div class="container">
+    <div class="product-card">
+      <img src="assets/background.png" alt="Daske" class="home-icon">
+      <p>Nudimo širok asortiman daske različitih dimenzija...</p>
+      <button class="btn" routerLink="/proizvodi">Detalji</button>
+    </div>
+    <div class="product-card">
+      <img src="assets/background.png" alt="Hiper" class="home-icon">
+      <p>Nudimo širok asortiman daske različitih dimenzija...</p>
+      <button class="btn" routerLink="/proizvodi">Detalji</button>
+    </div>
+  </div>
+</section>
+
+<section class="products-section1">
+  <div class="product-card1">
+    <img src="assets/background.png" alt="Hiper" class="home-icon">
+    <p>Nudimo širok asortiman daske različitih dimenzija...</p>
+    <button class="btn" routerLink="/proizvodi">Detalji</button>
+  </div>
+</section>

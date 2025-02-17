@@ -1,13 +1,13 @@
 
   .carousel-item img {
     width: 100%; 
-    height: 87vh; /* Visina da bude 100% visine ekrana */
+    height: 92vh; /* Visina da bude 100% visine ekrana */
     overflow: hidden; /* Sakriva sve što izlazi iz okvira */
     position: relative;
   }
   
   .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5); /* Poluprovidna pozadina za tekst */
+    background-color: rgba(87, 85, 85, 0.5); /* Poluprovidna pozadina za tekst */
   }
   
 

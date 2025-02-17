@@ -314,9 +314,9 @@
   }
   
   /* Opciono: Sakrivanje na jako malim ekranima */
-  @media (max-width: 480px) {
+  /* @media (max-width: 480px) {
     .floating-social-links {
       display: none;
     }
-  }
+  } */
   

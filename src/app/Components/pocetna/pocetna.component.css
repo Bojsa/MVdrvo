@@ -33,28 +33,7 @@
   width: 100%;
   height: 100%;
 }
-.floating-call-button {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: #28a745;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s, transform 0.2s;
-}
 
-.floating-call-button:hover {
-  background-color: #218838;
-  transform: scale(1.1);
-}
 
 .map-container3 {
   display: flex;
@@ -62,6 +41,10 @@
   justify-content: space-between;
   gap: 30px; /* Razmak između proizvoda */
   width: 100%; /* Kartice popunjavaju punu širinu */
+}
+.right-paragraph {
+  width: 50%; /* Podesi širinu na 50% ekrana */
+  padding: 10px;
 }
 
 .products-section1 {

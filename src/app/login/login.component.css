@@ -4,22 +4,32 @@
     max-width: 450px;
     margin: 50px auto;
     padding: 25px;
-    background: #f4ede4; /* da pozadina ne bi bila bela jer zelimo da se prikaze cela stranica odnosno da bude popup */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12.5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
     border: 2px solid #8b5e3c; /* Tamnobraon okvir */
     
 }
+p{
+    color:white;
+    margin-bottom: 1px;
+    text-shadow: 2.5px 2.5px 6.25px rgb(0, 0, 0), -2.5px -2.5px 6.25px black;
+
+}
 
 /* Naslov */
 h2 {
     font-size: 26px;
-    color: #5a3d2b; /* Tamnija boja drveta */
+    color: white; /* Tamnija boja drveta */
     margin-bottom: 20px;        /* 20px praznog prostora ispod elementa*/
     font-family: 'Georgia', serif;
     text-transform: uppercase;
     letter-spacing: 1px;
+    /* font-weight: bold; */
+    text-shadow: 2.5px 2.5px 6.25px rgb(0, 0, 0), -2.5px -2.5px 6.25px black;
 }
 
 /* Stilizacija input polja */

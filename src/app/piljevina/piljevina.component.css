@@ -1,0 +1,121 @@
+
+.daske-container{
+
+    display: flex;
+    justify-content: space-between;
+    gap: 37.5px;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .products-section {
+  padding: 62.5px 0;
+  margin-top: 100px;
+  }
+  
+  .naslov{
+    color: wheat;
+    text-shadow: 2.5px 2.5px 6.25px rgb(0, 0, 0), -2.5px -2.5px 6.25px black;
+    margin-left:23%;
+    padding: 15px;
+  }
+  
+  
+  .left-photo{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  
+  
+  .carousel-item img {
+    width: 40%; 
+    height: 40vh; 
+    overflow: hidden; 
+    position: relative;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(87, 85, 85, 0.5); 
+  }
+  .linkovi {
+    color: wheat;
+    text-shadow: 2.5px 2.5px 6.25px rgb(0, 0, 0), -2.5px -2.5px 6.25px black;
+    margin-left:10%;
+    font-size: 40px;
+  
+  }
+  
+  .divni {
+    width: 100%;
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12.5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border: 2px solid #8b5e3c; 
+  }
+  
+  .linkovi1 {
+    color: wheat;
+    font-size: 40px;
+    padding: 5px;
+  }
+  
+  a {
+    display: inline-block; 
+    position: relative; 
+    color: #000; 
+    text-decoration: none; 
+    justify-content: space-between;
+  }
+  
+  a::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    height: 2px; 
+    background: wheat; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+  }
+  
+  a:hover::after {
+    transform: scaleX(1); 
+  }
+  
+  
+  
+  
+  .opis{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    flex: 1; 
+    width: 55%; 
+    transition: transform 0.3s ease-in-out;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .opis p{
+    color: wheat;
+    text-shadow: 2.5px 2.5px 6.25px rgb(0, 0, 0), -2.5px -2.5px 6.25px black;
+    font-size: 20px;
+  
+  }
+  

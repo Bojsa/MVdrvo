@@ -1,23 +1,20 @@
 .header {
-    background-color: #dacdc2; /* #e9cbb4 ova boja nije losa */
+  backdrop-filter: blur(10px);
+  border-radius: 62.5px;
+  margin: 50px auto;
     /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); dodajemo senku ispod header-a */
     position: fixed;                /*ova i naredne tri linije su bitne ako hoces da ti header bude fixiran na vehu ekrana i da prati korisnika dok skroluje */
     top: 0;
-    left: 0;
-    right: 0;
+    left: 12.5%;
+    right: 12.5%;
     z-index: 1000;  /*postavljamo z-index na 1000 kako bi bio iznad ostalih elemenata */
-    transition: all 0.3s ease; /*dodajemo tranziciju za glatko prelazenje izmedju dva stanja */
   }
-  
-  .header.scrolled {      /* Ovo nesto ne radi*/
-    background-color: rgba(255, 255, 255, 0.95);   /*dodajemo  boju sa 95% providnosti */
-    backdrop-filter: blur(5px); /*dodajemo blur efekat na header */
-  }
+
   
   .nav-container {  /*Glavni nav kontejner koji drži sve elemente */
-    max-width: 1200px; /* Postavljamo maksimalnu širinu na 1200px */
+    max-width: 1250px; /* Postavljamo maksimalnu širinu na 1200px */
     margin: 0 auto; /* Centriramo nav kontejner */
-    padding: 0.5%;/* Dodajemo padding od 1rem sa svih strana, padding je  razmak izmedju teksta i ivice dugmeta*/
+    padding: 0.63%;/* Dodajemo padding od 1rem sa svih strana, padding je  razmak izmedju teksta i ivice dugmeta*/
     display: flex; /* najboljih načina za raspoređivanje elemenata u redove i kolone. */
     justify-content: space-between; /* Postavljamo elemente na krajeve kontejnera */
     align-items: center;  /* Postavljamo elemente vertikalno u centar */
@@ -40,9 +37,9 @@
   }
   
   .logo-image {
-    height: 40px;
+    height: 50px;
     width: auto;  
-    margin-right: 10px; /* Dodajemo razmak između slike i teksta */
+    margin-right: 12px; /* Dodajemo razmak između slike i teksta */
   }
   
   
@@ -50,14 +47,14 @@
   /* Navigation links */
   .nav-links {
     display: flex;
-    gap: 2rem; /* Razmak između linkova */
+    gap: 2.5rem; /* Razmak između linkova */
     align-items: center;
         
   }
   
   .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -66,11 +63,11 @@
   .nav-links a::after { /*active klasa osigurava da trenutno aktivni link ostane podvučen.*/
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: -2.5px;
     left: 0;
     width: 0;
-    height: 2px;
-    background-color: #5a3d2b;
+    height: 2.5px;
+    background-color: #0073e6;
     transition: width 0.3s ease;
   }
   
@@ -82,32 +79,33 @@
   /* Auth buttons */
   .auth-buttons {
     display: flex;
-    gap: 1rem;
+    gap: 1.3rem;
     z-index: 1001; /* Iznad overlay-a */
   }
   
   .login-btn, .register-btn {
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 0.63rem 1.25rem;
+    border-radius: 5px;
     text-decoration: none;
     transition: all 0.3s ease;
     font-weight: 500;
   }
   
   .login-btn {
-    color: #5a3d2b;
-    border: 1px solid #5a3d2b;
+    color: #ffffff;
+    border: 2.3px solid #5a3d2b;
+    font-weight: bold;
     
   }
   
   .register-btn {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     background: #5a3d2b; /* Tamnobraon */
     color: #fffaf3; /* Svetlo bež */
     border: none;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: 6.5px;
+    font-size: 18px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
     
@@ -115,7 +113,7 @@
   }
   
   .login-btn:hover {
-    background-color: rgba(5, 197, 37, 0.1);
+    background-color: #04a11f;
   }
   
   .register-btn:hover {
@@ -127,17 +125,17 @@
   .mobile-menu-btn {
     display: none;
     flex-direction: column;
-    gap: 4px;
+    gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    padding: 10px;
     z-index: 1001; /* Iznad overlay-a */
   }
   
   .bar {
-    width: 25px;
-    height: 3px;
+    width: 32px;
+    height: 3.8px;
     background-color: #333;
     transition: 0.3s;
   }
@@ -156,7 +154,7 @@
   }
   
   /* Responsive design */
-  @media (max-width: 768px) {
+  @media (max-width: 1360px) {
     .mobile-menu-btn {
       display: flex;
     }
@@ -228,33 +226,32 @@
 
     }
   }
+
+ 
   
   /* Za veće tablete i manje desktop ekrane */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .nav-container {
-      padding: 1rem 2rem;
-    }
-  
-    .nav-links {
-      gap: 1.5rem;
-    }
+  @media (min-width: 1361px) and (max-width: 1900px) {
+    .header {
+      backdrop-filter: blur(10px);
+      border-radius: 62.5px;
+      margin: 50px auto;
+        /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); dodajemo senku ispod header-a */
+        position: fixed;                /*ova i naredne tri linije su bitne ako hoces da ti header bude fixiran na vehu ekrana i da prati korisnika dok skroluje */
+        top: 0;
+        left: 7%;
+        right: 7%;
+        z-index: 1000;  /*postavljamo z-index na 1000 kako bi bio iznad ostalih elemenata */
+      }
+    
   }
   
-  /* Za male ekrane u landscape orijentaciji */
-  @media (max-height: 500px) and (orientation: landscape) {
-    .nav-links {
-      padding-top: 3rem;
-      overflow-y: auto;
-    }
-  }
-  /* ctrl plus enter da mi kopilot sugerise izmene*/
 
 /* Stil za naziv firme */
 .company-name {
   font-family: 'Georgia', serif;/* Moderna i čista sans-serif font */
   font-size: 40px; /* Prilagođen veličinu */
   font-weight: 600; /* Umjereno podebljan font */
-  color: #333333; /* Tamna boja za ozbiljan izgled */
+  color: #838181; /* Tamna boja za ozbiljan izgled */
   letter-spacing: 3px; /* Proširen razmak između slova */
   text-transform: uppercase; /* Svi veliki slova */
   line-height: 1.2; /* Prostor između redova */

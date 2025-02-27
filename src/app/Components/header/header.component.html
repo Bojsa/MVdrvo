@@ -1,4 +1,4 @@
-<!-- Glavni header kontejner -->
+
 <header class="header" [class.scrolled]="isScrolled">
     <!-- [class.scrolled]="isScrolled" dodaje klasu 'scrolled' kada korisnik scrolla stranicu -->
     
@@ -44,13 +44,10 @@
         <a routerLink="/oNama" 
            routerLinkActive="active" 
            (click)="closeMenu()">O nama</a>
-        <a routerLink="/usluge" 
-           routerLinkActive="active" 
-           (click)="closeMenu()">Usluge</a>
-           <a routerLink="/komentari" 
+           <a routerLink="/proizvodi" 
            routerLinkActive="active" 
            (click)="closeMenu()">Proizvodi</a>
-           <a routerLink="/proizvodi" 
+           <a routerLink="/komentari" 
            routerLinkActive="active"
            (click)="closeMenu()">Komentari</a>
            <a [routerLink]="[]" [fragment]="'footer_'" 
@@ -70,3 +67,7 @@
       </div>
     </nav>
   </header>
+
+
+
+

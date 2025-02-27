@@ -1,19 +1,38 @@
 .footer {
     padding: 30px 0 0 0;
-    margin-top: 0px;
-    background-color: #dacdc2;
+    margin-top: 100px;
     
   }
 
-  .hero-image1 {
-    width: 100%; 
-    height: 100vh; /* Visina da bude 100% visine ekrana */
-    overflow: hidden; /* Sakriva sve što izlazi iz okvira */
-    position: relative; 
-    overflow: hidden;
+  .f1{
+    flex: 1; /* Svaka f1 klasa zauzima polovinu donje polovine */
+    padding: 10px;
+  }
+  .footer-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 62.5%;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column; /* Elementi unutar .footer-card idu vertikalno */
+    height: 100%; /* Osiguraj da zauzima celu visinu */
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 37.5px;
+    width: 80%; /* Manje od 100%, da bi centriranje radilo */
+    margin: 0 auto;
   }
 
+
   .floating-call-button {
+    display: none !important;
     position: fixed;
     bottom: 20px;
     left: 20px;
@@ -36,114 +55,36 @@
     transform: scale(1.1);
   }
   
-  .hero-image1 img {
-    position: absolute; /* Pozicioniramo sliku unutar hero div-a */
-    bottom: 0;
-    left: 0;
-    width: 100vw; /* Širina slike je 100% širine ekrana (ne pomera se) */
-    height: 100%; /* Visina slike se prilagođava visini kontejnera */
-    object-fit: cover; /* Održava proporcije slike */
-    transform: translateY(30%);
-  }
-  
-  .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    padding: 0 20px;
-  }
-  
-  /* Logo sekcija */
-  .footer-logo {
-    font-family: 'Georgia', serif;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    color: #0a0a0a;
-  }
-  .footer-logo1 {
-    font-family: 'Georgia', serif;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    color: #0a0a0a;
-    border-bottom: 3px solid #0073e6; /* Elegantna linija ispod teksta */
+
+
+  .contact-info {
+    list-style: none; /* Uklanja standardne tačke sa liste */
+    padding: 0; /* Uklanja defaultno odstojanje sa leve strane */
   }
 
-  .footer-logo img {
-    height: 40px;
-    width: auto;
-  }
-  
-  .footer-logo h3 {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-  
-  .company-description {
-    color: #0a0a0a;
-    line-height: 1.6;
-  }
-  
-  /* Naslovi sekcija */
-  .footer-section h4 {
-    color: #0a0a0a;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    position: relative;
-  }
-  
-  .footer-section h4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    width: 50px;
-    height: 2px;
-    background-color: #3498db;
-  }
-  
-  /* Liste */
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-section ul li {
-    margin-bottom: 12px;
-  }
-  
-  .footer-section ul li a {
-    color: #0a0a0a;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-section ul li a:hover {
-    color: #3498db;
-  }
-  
   /* Kontakt informacije */
   .contact-info li {
     display: flex;
-    align-items: center;
+    text-align: left; /* Poravnava tekst unutar <li> uz levu ivicu */
+  margin: 5px 0; /* Dodaje razmak između stavki */
+    align-items: left;
     gap: 10px;
-    color: #0a0a0a;
+    margin-bottom: 16.1px;
+    color: white;
+    font-size: 14px;    
   }
   
   .contact-info i {
     color: #3498db;
     width: 20px;
   }
-  
+   
   /* Radno vreme */
   .working-hours li {
-    color: #0a0a0a;
+    color: white;   
+    margin: 5px 0; /* Dodaje razmak između stavki */      
+    margin-bottom: 7.2px;      
+    font-size: 17px;         
   }
   
   /* Donji deo footer-a */
@@ -152,66 +93,61 @@
     padding: 8px 0;
     margin-top: 40px;
   }
-
-  .footer-bottom1 {
-    color: #0a0a0a;
-    font-size: 1.2rem;
-    margin-left: 20px;
-    position: relative;
+  .hr-footer {
+    color: white;
   }
-  
-  .footer-bottom-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
+.f1 h4{
+  color:white;
+  font-size: 17px;
+}
+  .right-paragraph {
+    flex: 1; /* Ovaj element zauzima gornju polovinu */
+    color: rgb(226, 222, 222);
+    text-shadow: 2.5px 2.5px 6.25px rgb(0, 0, 0), -2.5px -2.5px 6.25px black;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .bottom-half {
+    display: inline-flex;
+    flex: 1; /* Ovaj element zauzima donju polovinu */
+    justify-content: space-between; /* Raspoređuje .f1 elemente ravnomerno */
+    text-align: left;
+  }
+  .logo-section {
+    display: flex;  /* najboljih načina za raspoređivanje elemenata u redove i kolone. */
     align-items: center;
+    z-index: 1001; /* Iznad overlay-a */
+    padding: 0px;   /* Poništi nepotrebni padding */
   }
   
-  .footer-bottom p {
-    margin: 0;
-    color: #bdc3c7;
-  }
-
-  /* Socijalni linkovi */
-  /* .social-links {
+  .logo {
     display: flex;
-    gap: 20px;
-    justify-content: right;
-
-    
+    align-items: center;
+    text-decoration: none; /* Uklanjamo podvučenost */
+    color: #333;
+    margin-top: 2px;
   }
-  
-  .social-links a {
-    color: #0a0a0a;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  .logo h3{
+    color:white;
+    font-size: small;
   }
-  
-  .social-links a:hover {
-    color: #3498db;
-  } */
-  
-  /* Responsive dizajn */
-  @media (max-width: 768px) {
-    .footer-content {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-  
-    .footer-bottom-content {
-      flex-direction: column;
-      text-align: center;
-      gap: 15px;
-    }
+  .logo p {
+    color: white;
+    font-size:1.7ch; 
+  }
+  .logo-image {
+    height: 50px;
+    width: auto;  
+    margin-right: 12px; /* Dodajemo razmak između slike i teksta */
   }
 
-  /* MREZE */
 
-
-
-
+  .hr-section{
+    border: none;               
+    height: 1px;               
+    background-color: rgb(255, 255, 255);    
+    margin: 20px 0;  
+  }
 
   .footer-bottom-content {
     max-width: 1200px;
@@ -220,6 +156,7 @@
     display: flex;
     justify-content: space-between; /* Razmak između copyright teksta i ikonica */
     align-items: center;
+    color:rgb(192, 188, 188);
   }
   
   .social-links {
@@ -259,22 +196,6 @@
     color: #00f2ea;
   }
   
-  /* Responsive dizajn */
-  @media (max-width: 768px) {
-    .footer-bottom-content {
-      flex-direction: column;
-      text-align: center;
-      gap: 20px;
-    }
-  
-    .social-links {
-      justify-content: center;
-    }
-  }
-
-
-
-
 
         /*SOCIJALNE MREZE DA LEBDE SA DESNE STRANE*/
   
@@ -322,24 +243,90 @@
     color: #000000;
   }
   
-  /* Responsive dizajn */
-  @media (max-width: 768px) {
-    .floating-social-links {
-      right: 10px;  /* Malo bliže ivici na mobilnom */
-      bottom: 10px;
-    }
-  
-    .social-btn {
-      width: 40px;
-      height: 40px;
-      font-size: 18px;
+
+
+
+  /* MREZE */
+
+  /* @media (min-width: 1361px) and (max-width: 1646px) {
+
+  } */
+
+  @media (max-width: 1536) {
+    .right-paragraph h {
+      font-size: 10px;
     }
   }
   
-  /* Opciono: Sakrivanje na jako malim ekranima */
-  /* @media (max-width: 480px) {
-    .floating-social-links {
-      display: none;
+
+  @media (min-width: 1024px) and (max-width: 1536) {
+    /* .footer-card iframe {
+      width: 100%;  
+      height: 400px; 
     }
-  } */
+
+    .right-paragraph {
+      flex: 1; 
+      color: rgb(226, 222, 222);
+      text-shadow: 2.5px 2.5px 6.25px rgb(0, 0, 0), -2.5px -2.5px 6.25px black;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .footer-card {
+      display: flex;
+      width: 62.5%;
+      height: 100%; 
+    } */
+
+    .container {
+      flex-direction: column;
+    }
+
+    .footer-card {
+      width: 100%;
+      height: 40%; /* Osiguraj da zauzima celu visinu */
+    }
+
+    .footer-card iframe {
+      width: 100%;  
+      height: 400px; 
+      
+    }
+
+    .footer-bottom-content p{
+      margin-left: 10%;
+    }
+
+  }
+
   
+
+
+  @media (max-width: 1023px) {
+    .container {
+      flex-direction: column;
+    }
+    .floating-call-button {
+      display:flex  !important;
+    }
+
+    .footer-card {
+      width: 100%;
+      height: 40%; /* Osiguraj da zauzima celu visinu */
+    }
+    .footer {
+      margin-top: 50px;
+      
+    }
+
+    .footer-card iframe {
+      width: 100%;  
+      height: 400px; 
+      
+    }
+
+    .footer-bottom-content p{
+      margin-left: 10%;
+    }
+  }
+   
